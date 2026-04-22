@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ContactManager.Core;
+using ContactManager.CLI;
+
+return
+   new Menu(
+       new SystemConsole(),
+       new ContactService(new InMemoryContactRepository()))
+       .Run();
+
